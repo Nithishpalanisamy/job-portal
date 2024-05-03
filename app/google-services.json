@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "974700309127",
+    "project_id": "mad-project-8f984",
+    "storage_bucket": "mad-project-8f984.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974700309127:android:fd35c2a3e2443edc1ea622",
+        "android_client_info": {
+          "package_name": "com.example.job"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARksayLK_sy9J28Q7TblZgY5B1INCZ06A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
