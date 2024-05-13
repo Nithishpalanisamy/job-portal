@@ -43,25 +43,25 @@
             android:padding="5dp"
             android:id="@+id/all_job_post_description"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Skills"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="5dp"
-            android:textColor="@color/black"
-            android:padding="5dp"
-            android:id="@+id/all_job_post_skill"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Skills"-->
+<!--            android:textAppearance="?android:textAppearanceLarge"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:padding="5dp"-->
+<!--            android:id="@+id/all_job_post_skill"/>-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Salary"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:layout_margin="5dp"
-            android:textColor="@color/lavender"
-            android:padding="5dp"
-            android:id="@+id/all_job_post_salary"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Salary"-->
+<!--            android:textAppearance="?android:textAppearanceLarge"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:textColor="@color/lavender"-->
+<!--            android:padding="5dp"-->
+<!--            android:id="@+id/all_job_post_salary"/>-->
 
     </LinearLayout>
 

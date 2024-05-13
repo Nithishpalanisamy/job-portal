@@ -101,7 +101,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                android:id="@+id/search"
+                android:id="@+id/searchemployee"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
@@ -185,7 +185,7 @@
                 android:layout_weight="1"
                 app:cardElevation="20dp"
                 app:cardCornerRadius="20dp"
-                android:id="@+id/logout">
+                android:id="@+id/logout2">
 
                 <RelativeLayout
                     android:layout_width="match_parent"

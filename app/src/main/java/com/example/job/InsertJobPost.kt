@@ -19,7 +19,8 @@ class InsertJobPost : AppCompatActivity() {
     private lateinit var jobsalary: EditText
     private lateinit var post: Button
     private val db = Firebase.database.reference
-    private val DatabaseReference mPublicDatabase;
+    private val mPublicDatabase = Firebase.database.getReference("Public database")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_insert_job_post)
@@ -29,7 +30,7 @@ class InsertJobPost : AppCompatActivity() {
         jobskill = findViewById(R.id.skill)
         jobsalary = findViewById(R.id.salary)
         post = findViewById(R.id.postButton) // replace with your actual post button id
-        mPublicDatabase=FirebaseDataBase.getInstance().getReference().child("public database");
+
         post.setOnClickListener {
             val title = jobtitle.text.toString().trim()
             val description = jobdescription.text.toString().trim()
@@ -56,7 +57,6 @@ class InsertJobPost : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Get current date
             val sdf = SimpleDateFormat("yyyy/MM/dd")
             val currentDate = sdf.format(Date())
 
@@ -69,17 +69,31 @@ class InsertJobPost : AppCompatActivity() {
             )
 
             val currentUser = FirebaseAuth.getInstance().currentUser
-            currentUser?.uid?.let { userId ->
-                db.child("jobposts").child(userId).push()
-                    .setValue(jobpost)
-                    .addOnSuccessListener {
-                        Toast.makeText(this, "Job Posted Successfully", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this, CompanyPosts::class.java))
-                        finish() // finish this activity after starting new one
-                    }
-                    .addOnFailureListener { e ->
-                        Toast.makeText(this, "Failed: ${e.message}", Toast.LENGTH_SHORT).show()
-                    }
+            currentUser?.let { user ->
+                val userId = user.uid
+                val userEmail = user.email
+
+                if (userEmail != null) {
+                    // Store email and user ID along with other job details
+                    jobpost["email"] = userEmail
+                    jobpost["Id"] = userId  // Add this line
+
+                    // Store in public database
+                    mPublicDatabase.push().setValue(jobpost)
+
+                    // Store under user's ID in 'jobposts' node
+                    db.child("jobposts").child(userId).push().setValue(jobpost)
+                        .addOnSuccessListener {
+                            Toast.makeText(this, "Job Posted Successfully", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, CompanyPosts::class.java))
+                            finish() // finish this activity after starting new one
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, "Failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                        }
+                } else {
+                    Toast.makeText(this, "User email not found", Toast.LENGTH_SHORT).show()
+                }
             } ?: run {
                 Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
             }

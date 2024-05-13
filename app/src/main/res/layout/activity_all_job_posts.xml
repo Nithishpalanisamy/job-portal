@@ -7,6 +7,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AllJobPosts">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lavender_border"
+        android:layout_margin="18dp"
+        android:hint="Search"
+        android:drawableLeft="@drawable/baseline_search_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/app_theme"
+        android:padding="10dp"
+        android:id="@+id/job_search"/>
 
     
     <androidx.recyclerview.widget.RecyclerView

@@ -101,7 +101,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                android:id="@+id/history"
+                android:id="@+id/appliedjob"
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
@@ -112,7 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/elecName"
-                        android:text="History"
+                        android:text="Applied"
                         android:textSize="20sp"
                         android:textColor="@color/lavender"
                         android:layout_marginTop="10dp"

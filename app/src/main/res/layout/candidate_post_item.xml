@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    android:elevation="5dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Applied for.."
+            android:textAppearance="?android:textAppearanceSmall"
+            android:padding="5dp"
+            android:textColor="@color/app_theme"
+            android:id="@+id/title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/lavender"
+            android:id="@+id/candidate_title"
+            android:maxLines="3"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/candidate_name"
+            android:maxLines="3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/candidate_email"
+            android:maxLines="3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/candidate_location"
+            android:maxLines="3"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Experience"
+            android:padding="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:id="@+id/candidate_experience"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Qualification"
+            android:padding="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:id="@+id/candidate_qualification"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skills"
+            android:padding="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:id="@+id/candidate_skills"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:text="Contact"
+            android:backgroundTint="@color/app_theme"
+            android:id="@+id/candidate_button"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

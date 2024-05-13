@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardElevation="5dp"
+    android:layout_margin="25dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:maxLines="1"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:id="@+id/job_details_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="21.jul.2024"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:layout_margin="5dp"
+        android:textColor="@color/lavender"
+        android:padding="5dp"
+        android:id="@+id/job_details_date"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_margin="5dp"
+        android:maxLines="3"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:id="@+id/job_details_description"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:id="@+id/job_details_email"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skills"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:id="@+id/job_details_skill"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salary"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_margin="5dp"
+        android:textColor="@color/lavender"
+        android:padding="5dp"
+        android:id="@+id/job_details_salary"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Apply"
+        android:id="@+id/job_details_apply"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        app:cornerRadius = "15dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Contact"
+        android:id="@+id/job_details_contact"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        app:cornerRadius = "15dp"/>
+
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>
